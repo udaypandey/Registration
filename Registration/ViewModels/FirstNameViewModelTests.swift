@@ -7,7 +7,9 @@
 //
 
 import XCTest
-//import RxBlocking
+import RxSwift
+import RxCocoa
+import RxBlocking
 
 @testable import Registration
 
@@ -20,9 +22,36 @@ class FirstNameViewModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testFirstNameTextInput() {
+        let scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
+
         let viewModel = FirstNameViewModel()
+        let enabled = viewModel.output.isValid
+            .asObservable()
+            .subscribeOn(scheduler)
         
-//        let scheduler = Conc
+        // Startup values
+        // Ensure button is disabled at the start
+        XCTAssertEqual(try enabled.toBlocking().first(), false)
+        
+        // First few letters
+        viewModel.input.textChanged("Rob")
+        // Ensure button is disabled at the start
+        XCTAssertEqual(try enabled.toBlocking().first(), false)
+
+        // More letters
+        viewModel.input.textChanged("Robe")
+        // Ensure button is disabled at the start
+        XCTAssertEqual(try enabled.toBlocking().first(), true)
+
+        // Clear out text, ensure button is disabled again
+        viewModel.input.textChanged("")
+        // Ensure button is disabled at the start
+        XCTAssertEqual(try enabled.toBlocking().first(), false)
+        
+        // Final name input
+        viewModel.input.textChanged("Robert")
+        // Ensure button is disabled at the start
+        XCTAssertEqual(try enabled.toBlocking().first(), true)
     }
 }

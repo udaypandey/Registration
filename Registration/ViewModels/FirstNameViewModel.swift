@@ -15,34 +15,42 @@ struct FirstNameViewModel: ViewModelType {
     let output: Output
     
     init() {
-        let userName = BehaviorSubject<String>(value: "")
-        let returnPressed = BehaviorSubject<Void>(value: ())
+        let changedText = BehaviorSubject<String>(value: "")
+        let returnTapped = BehaviorSubject<Void>(value: ())
+        let continueTapped = BehaviorSubject<Void>(value: ())
         
-        let buttonEnabled = userName
+        let buttonEnabled = changedText
             .map { Validator.isValid(firstName: $0) ? true : false }
             .asDriver(onErrorJustReturn: false)
         
-        input = Input(userNameText: userName.asObserver(), returnPressed: returnPressed.asObserver())
-        output = Output(buttonEnabled: buttonEnabled)
+        input = Input(textChangedObserver: changedText.asObserver(),
+                      returnTappedObserver: returnTapped.asObserver(),
+                      continueTappedObserver: continueTapped.asObserver())
+        output = Output(isValid: buttonEnabled)
     }
 }
 
 extension FirstNameViewModel {
     struct Input {
-        let userNameText: AnyObserver<String>
+        let textChangedObserver: AnyObserver<String>
         func textChanged(_ text: String) {
-            userNameText.onNext(text)
+            textChangedObserver.onNext(text)
         }
         
-        let returnPressed: AnyObserver<Void>
-        func returnButtonPressed() {
-            returnPressed.onNext(())
+        let returnTappedObserver: AnyObserver<Void>
+        func returnTapped() {
+            returnTappedObserver.onNext(())
+        }
+        
+        let continueTappedObserver: AnyObserver<Void>
+        func continueTapped() {
+            continueTappedObserver.onNext(())
         }
     }
 }
 
 extension FirstNameViewModel {
     struct Output {
-        let buttonEnabled: Driver<Bool>
+        let isValid: Driver<Bool>
     }
 }
