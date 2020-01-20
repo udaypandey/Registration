@@ -36,7 +36,7 @@ struct EmailViewModel: ViewModelType {
             .asDriver(onErrorJustReturn: userMessageString)
         
         let isValid = changedText
-            .map { Validator.isValid(email: $0) ? true : false }
+            .map { Validator.isValid(email: $0) }
             .asDriver(onErrorJustReturn: false)
 
         //TODO: Will there be more granular error messages? Then should ideally move
