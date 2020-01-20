@@ -32,19 +32,27 @@ struct FirstNameViewModel: ViewModelType {
 
 extension FirstNameViewModel {
     struct Input {
-        let textChangedObserver: AnyObserver<String>
+        private let textChangedObserver: AnyObserver<String>
         func textChanged(_ text: String) {
             textChangedObserver.onNext(text)
         }
         
-        let returnTappedObserver: AnyObserver<Void>
+        private let returnTappedObserver: AnyObserver<Void>
         func returnTapped() {
             returnTappedObserver.onNext(())
         }
         
-        let continueTappedObserver: AnyObserver<Void>
+        private let continueTappedObserver: AnyObserver<Void>
         func continueTapped() {
             continueTappedObserver.onNext(())
+        }
+        
+        init(textChangedObserver: AnyObserver<String>,
+             returnTappedObserver: AnyObserver<Void>,
+             continueTappedObserver: AnyObserver<Void>) {
+            self.textChangedObserver = textChangedObserver
+            self.returnTappedObserver = returnTappedObserver
+            self.continueTappedObserver = continueTappedObserver
         }
     }
 }
