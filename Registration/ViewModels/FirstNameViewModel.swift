@@ -19,14 +19,14 @@ struct FirstNameViewModel: ViewModelType {
         let returnTapped = BehaviorSubject<Void>(value: ())
         let continueTapped = BehaviorSubject<Void>(value: ())
         
-        let buttonEnabled = changedText
+        let isValid = changedText
             .map { Validator.isValid(firstName: $0) ? true : false }
             .asDriver(onErrorJustReturn: false)
         
         input = Input(textChangedObserver: changedText.asObserver(),
                       returnTappedObserver: returnTapped.asObserver(),
                       continueTappedObserver: continueTapped.asObserver())
-        output = Output(isValid: buttonEnabled)
+        output = Output(isValid: isValid)
     }
 }
 
