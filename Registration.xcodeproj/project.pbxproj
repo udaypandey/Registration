@@ -21,6 +21,9 @@
 		1CF1BE5823D5CC8B00ACCA35 /* LastNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF1BE5723D5CC8B00ACCA35 /* LastNameViewModel.swift */; };
 		1CF1BE5A23D5CC9F00ACCA35 /* LastNameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF1BE5923D5CC9F00ACCA35 /* LastNameViewModelTests.swift */; };
 		1CF1BE5E23D5D37600ACCA35 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF1BE5D23D5D37600ACCA35 /* Model.swift */; };
+		1CF1BE6023D5D7B500ACCA35 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF1BE5F23D5D7B500ACCA35 /* ValidatorTests.swift */; };
+		1CF1BE6423D5D99700ACCA35 /* EmailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF1BE6323D5D99700ACCA35 /* EmailViewModelTests.swift */; };
+		1CF1BE6623D5D9A100ACCA35 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF1BE6523D5D9A100ACCA35 /* EmailViewModel.swift */; };
 		6425BA154E4831D6EAC9A6EC /* Pods_Registration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054E0FF1E7ED57DC1CD8BBBF /* Pods_Registration.framework */; };
 		ADE77D4807B17D2C208C3174 /* Pods_Registration_RegistrationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3DDD26B3E932BAD9C55842 /* Pods_Registration_RegistrationUITests.framework */; };
 		BF19E49422BC8FDC0D99DDDA /* Pods_RegistrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E325570AE97B6BDF1D6447 /* Pods_RegistrationTests.framework */; };
@@ -66,6 +69,9 @@
 		1CF1BE5723D5CC8B00ACCA35 /* LastNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameViewModel.swift; sourceTree = "<group>"; };
 		1CF1BE5923D5CC9F00ACCA35 /* LastNameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameViewModelTests.swift; sourceTree = "<group>"; };
 		1CF1BE5D23D5D37600ACCA35 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1CF1BE5F23D5D7B500ACCA35 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
+		1CF1BE6323D5D99700ACCA35 /* EmailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModelTests.swift; sourceTree = "<group>"; };
+		1CF1BE6523D5D9A100ACCA35 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 		27E325570AE97B6BDF1D6447 /* Pods_RegistrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RegistrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E2DC7E1295C645A87A0B8ED /* Pods-RegistrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegistrationTests.release.xcconfig"; path = "Target Support Files/Pods-RegistrationTests/Pods-RegistrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		5DAD4294136C8C909BBB61A9 /* Pods-Registration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Registration.release.xcconfig"; path = "Target Support Files/Pods-Registration/Pods-Registration.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,7 +184,10 @@
 				1CF1BE5923D5CC9F00ACCA35 /* LastNameViewModelTests.swift */,
 				1CF1BE5123D5BAD000ACCA35 /* FirstNameViewModel.swift */,
 				1CF1BE5523D5BF7A00ACCA35 /* FirstNameViewModelTests.swift */,
+				1CF1BE6323D5D99700ACCA35 /* EmailViewModelTests.swift */,
+				1CF1BE6523D5D9A100ACCA35 /* EmailViewModel.swift */,
 				1CF1BE5323D5BF4500ACCA35 /* Validator.swift */,
+				1CF1BE5F23D5D7B500ACCA35 /* ValidatorTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -462,6 +471,7 @@
 				1CF1BE5E23D5D37600ACCA35 /* Model.swift in Sources */,
 				1CF1BE5223D5BAD000ACCA35 /* FirstNameViewModel.swift in Sources */,
 				1CF1BE2123D5B83200ACCA35 /* ViewController.swift in Sources */,
+				1CF1BE6623D5D9A100ACCA35 /* EmailViewModel.swift in Sources */,
 				1CF1BE5423D5BF4500ACCA35 /* Validator.swift in Sources */,
 				1CF1BE1F23D5B83200ACCA35 /* AppDelegate.swift in Sources */,
 				1CF1BE5023D5BA6E00ACCA35 /* ViewModelType.swift in Sources */,
@@ -473,6 +483,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CF1BE6023D5D7B500ACCA35 /* ValidatorTests.swift in Sources */,
+				1CF1BE6423D5D99700ACCA35 /* EmailViewModelTests.swift in Sources */,
 				1CF1BE5A23D5CC9F00ACCA35 /* LastNameViewModelTests.swift in Sources */,
 				1CF1BE5623D5BF7A00ACCA35 /* FirstNameViewModelTests.swift in Sources */,
 				1CF1BE3423D5B83300ACCA35 /* RegistrationTests.swift in Sources */,

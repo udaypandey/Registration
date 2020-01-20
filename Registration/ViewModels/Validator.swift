@@ -20,5 +20,10 @@ extension Validator {
         //TODO: Placeholder checks
         return lastName.count > 5
     }
+    
+    static func isValid(email: String) -> Bool {
+        //TODO: Placeholder checks
+        return email.contains("@")
+    }
 }
 
