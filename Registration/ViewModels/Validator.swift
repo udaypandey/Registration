@@ -12,11 +12,13 @@ enum Validator {}
 
 extension Validator {
     static func isValid(firstName: String) -> Bool {
+        //TODO: Placeholder checks
         return firstName.count > 3
     }
     
     static func isValid(lastName: String) -> Bool {
-        return lastName.count > 3
+        //TODO: Placeholder checks
+        return lastName.count > 5
     }
 }
 
