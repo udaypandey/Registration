@@ -11,6 +11,15 @@ import Foundation
 enum Validator {}
 
 extension Validator {
+    struct PasswordValidation: OptionSet {
+        let rawValue: Int
+        
+        static let minimumCharacters = PasswordValidation(rawValue: 1 << 0)
+        static let capitalLetter     = PasswordValidation(rawValue: 1 << 1)
+        static let number            = PasswordValidation(rawValue: 1 << 2)
+    }
+}
+extension Validator {
     static func isValid(firstName: String) -> Bool {
         //TODO: Placeholder checks
         return firstName.count > 3
@@ -25,5 +34,11 @@ extension Validator {
         //TODO: Placeholder checks
         return email.contains("@")
     }
+    
+    static func isValid(password: String) -> PasswordValidation {
+        let ret: PasswordValidation = []
+        return ret
+    }
+
 }
 
