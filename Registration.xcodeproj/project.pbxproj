@@ -76,6 +76,7 @@
 		1CF1BE6523D5D9A100ACCA35 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 		1CF1BE6723D60F3300ACCA35 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		1CF1BE6923D60F4200ACCA35 /* PasswordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModelTests.swift; sourceTree = "<group>"; };
+		1CF1BE6C23D747C300ACCA35 /* MVVM.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MVVM.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		27E325570AE97B6BDF1D6447 /* Pods_RegistrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RegistrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E2DC7E1295C645A87A0B8ED /* Pods-RegistrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegistrationTests.release.xcconfig"; path = "Target Support Files/Pods-RegistrationTests/Pods-RegistrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		5DAD4294136C8C909BBB61A9 /* Pods-Registration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Registration.release.xcconfig"; path = "Target Support Files/Pods-Registration/Pods-Registration.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 		1CF1BE1D23D5B83200ACCA35 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				1CF1BE6B23D7479800ACCA35 /* Playgrounds */,
 				1CF1BE4D23D5B99300ACCA35 /* Main */,
 				1CF1BE4C23D5B98800ACCA35 /* ViewModels */,
 				1CF1BE2223D5B83200ACCA35 /* Main.storyboard */,
@@ -205,6 +207,14 @@
 				1CF1BE2023D5B83200ACCA35 /* ViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		1CF1BE6B23D7479800ACCA35 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				1CF1BE6C23D747C300ACCA35 /* MVVM.playground */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 		5E4F32E1896103EA51B573DA /* Frameworks */ = {
